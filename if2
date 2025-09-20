@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konsultacje Online</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h1 { color: #333; }
+    p { color: #555; }
+    input, textarea {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .pay-button {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #0070ba;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+    .pay-button:hover { background-color: #005c99; }
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+      background-color: #28a745;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background-color: #1e7e34; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Konsultacje Online</h1>
+    <p>Umów się na konsultację i zapłać przez PayPal.</p>
+
+    <form action="mailto:TWÓJ_EMAIL@domena.com" method="post" enctype="text/plain">
+      <input type="text" name="Imię" placeholder="Twoje imię" required><br>
+      <input type="email" name="Email" placeholder="Twój email" required><br>
+      <textarea name="Wiadomość" rows="5" placeholder="Treść wiadomości" required></textarea><br>
+      <button type="submit">Wyślij formularz</button>
+    </form>
+
+    <a class="pay-button" href="https://www.paypal.com/donate?business=TWÓJ_PAYPAL_EMAIL&currency_code=PLN" target="_blank">Zapłać przez PayPal</a>
+    <!-- <a class="pay-button" href="TWOJ_STRIPE_LINK" target="_blank">Zapłać przez Stripe</a> -->
+  </div>
+</body>
+</html>
